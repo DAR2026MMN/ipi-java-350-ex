@@ -65,10 +65,9 @@ public class Employe {
         case THURSDAY: if(d.isLeapYear()) var =  var + 1; break;
         case FRIDAY:
         if(d.isLeapYear()) var =  var + 2;
-        else var =  var + 1; break;
-               
-case SATURDAY:var = var + 1;
-                    break;
+        else var =  var + 1; break; 
+        case SATURDAY:var = var + 1; break;
+                  
         }
         int monInt = (int) Entreprise.joursFeries(d).stream().filter(localDate ->
                 localDate.getDayOfWeek().getValue() <= DayOfWeek.FRIDAY.getValue()).count();
